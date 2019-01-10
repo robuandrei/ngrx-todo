@@ -1,0 +1,37 @@
+<div class="container-fluid" *ngIf="todos">
+  <div class="row">
+
+    <div class="col-12">
+
+      <div class="card mt-5">
+        <div class="card-header">
+          <h1 class="display-6 d-inline">To-do App</h1>
+
+          <app-add-todo></app-add-todo>
+
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let todo of todos | paginate: { itemsPerPage: 10, currentPage: p }">
+                <td>
+                  <app-todo [todo]="todo"></app-todo>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div [ngClass]="bgClass"
+     class="msg-info"
+     *ngIf="message">
+  {{message}}
+</div>

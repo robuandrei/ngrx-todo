@@ -1,0 +1,53 @@
+<ng-template #content let-modal>
+
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add new Todo</h4>
+
+    <button type="button" 
+            class="close" 
+            aria-label="Close" 
+            (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <form [formGroup]="todoFormGroup" (ngSubmit)="addTodo(todoFormGroup)">
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="todoName">Todo Name:</label>
+        <div class="input-group">
+          <input class="form-control" 
+                  id="todoName" 
+                  formControlName='todoName'
+                  name="todoName" 
+                  required/>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label for="todoDescription">Todo Description:</label>
+        <div class="input-group">
+            <textarea class="form-control" 
+                    id="todoDescription" 
+                    formControlName="todoDescription"
+                    name="todoDescription"
+                    required>
+            </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" 
+              class="btn btn-outline-dark"
+              [disabled]="!todoFormGroup.valid"
+              title="Add Todo">
+        <span class="fas fa-save"></span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<button class="btn btn-primary d-inline float-right" (click)="open(content)" title="Add Todo">
+  <span class="fas fa-plus"></span>
+</button>

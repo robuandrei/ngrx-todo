@@ -1,0 +1,97 @@
+<div class="row" 
+     [ngClass]="{'bg-light': todo.todoState == 1}">
+
+  <div class="col-1">
+    <span class="label text-info"
+          [ngClass]="{'text-muted': todo.todoState == 1}">#id</span>
+    <p [ngClass]="{'text-muted': todo.todoState == 1}">
+      {{todo.id}}
+    </p>
+  </div>
+
+  <div class="col-3">
+    <span class="label text-info"
+          [ngClass]="{'text-muted': todo.todoState == 1}">#title</span>
+    <p [ngClass]="{'text-muted': todo.todoState == 1}"
+       *ngIf="todo.id !== editable">
+      {{todo.todoName}}
+    </p>
+
+    <div class="input-group" 
+         *ngIf="todo.id === editable ">
+      <input class="form-control" 
+             id="todoName" 
+             [(ngModel)]="todo.todoName"
+             name="todoName" />
+    </div>
+  </div>
+
+  <div class="col-5">
+    <span class="label text-info"
+          [ngClass]="{'text-muted': todo.todoState == 1}">
+      #description:
+    </span>
+    <p [ngClass]="{'text-muted': todo.todoState == 1}"
+       *ngIf="editable !== todo.id">
+      {{todo.todoDescription}}
+    </p>
+
+    <div class="input-group" 
+         *ngIf="editable === todo.id">
+      <textarea class="form-control" 
+                id="todoName" 
+                [(ngModel)]="todo.todoDescription"
+                name="todoName">
+      </textarea>
+    </div>
+
+  </div>
+
+  <div class="col-2">
+    <span class="label text-success" 
+          *ngIf="todo.todoState > 0; else inProgress">
+      #done
+      <span class="fas fa-check"></span>
+    </span>
+    <ng-template #inProgress>
+      <span class="label text-primary" >
+        #in progress
+        <span class="fas fa-spinner"></span>
+      </span>
+    </ng-template>
+   
+    <input type="checkbox" 
+           [checked]="todo.todoState"
+           (change)="changeState(todo)" />
+  </div>
+
+  <div class="col-1">
+      <span class="label text-info"
+            [ngClass]="{'text-muted': todo.todoState == 1}">
+        #actions
+      </span>
+    <div class="btn-group btn-group-sm">
+
+      <button class="btn btn-sm btn-primary" 
+              [disabled]="todo.todoState > 0"
+              *ngIf="editable !== todo.id"
+              (click)="editableTodo(todo.id)">
+        <span class="fas fa-edit"></span>
+      </button>
+
+      <button class="btn btn-sm btn-primary" 
+              *ngIf="editable == todo.id"
+              (click)="editTodo(todo)">
+        <span class="fas fa-save"></span>
+      </button>
+
+      <button class="btn btn-sm btn-danger" 
+              [disabled]="todo.todoState > 0"
+              (click)="deleteTodo(todo.id)">
+        <span class="fas fa-trash-alt"></span>
+      </button>
+
+    </div>
+  </div>
+
+</div>

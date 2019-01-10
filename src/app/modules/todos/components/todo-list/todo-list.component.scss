@@ -1,0 +1,32 @@
+.display-6 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.msg-info {
+  width: 250px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-weight: 500;
+}
+
+
+/deep/ .ngx-pagination {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  margin-left: auto;
+  text-align: center;
+  padding-left: 0px;
+}
