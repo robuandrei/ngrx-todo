@@ -1,6 +1,9 @@
-# ReduxCrud
+# How to use Redux in an Angular application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+
+## Using JSON Server
+Run `json-server db.json` for REST API.
 
 ## Development server
 
