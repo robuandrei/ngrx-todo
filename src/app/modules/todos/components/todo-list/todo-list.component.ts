@@ -13,7 +13,7 @@ export class TodoListComponent implements OnInit {
   todos: Array<Todo>[];
   message: string;
   bgClass: string;
-  p: number = 1;
+  p = 1;
 
   constructor(private store: Store<any>) { }
 

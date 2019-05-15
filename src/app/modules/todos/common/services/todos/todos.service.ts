@@ -13,7 +13,7 @@ export class TodosService {
   baseUrl: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://localhost:3000';
+    this.baseUrl = 'http://localhost:8080';
   }
 
   getAPITodos() {

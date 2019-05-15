@@ -1,70 +1,16 @@
 {
   "todos": [
     {
-      "todoName": "test",
-      "todoDescription": "lorem ipsum",
-      "todoState": 1,
+      "todoName": "Go to the office",
+      "todoDescription": "Go to work and to some tasks!",
+      "todoState": 0,
       "id": 1
     },
     {
-      "todoName": "1",
-      "todoDescription": "2",
+      "todoName": "Eat the lunch!",
+      "todoDescription": "Go with your team members to eat!",
       "todoState": 0,
       "id": 2
-    },
-    {
-      "todoName": "2",
-      "todoDescription": "2",
-      "todoState": 0,
-      "id": 3
-    },
-    {
-      "todoName": "3",
-      "todoDescription": "3",
-      "todoState": 0,
-      "id": 4
-    },
-    {
-      "todoName": "3",
-      "todoDescription": "4",
-      "todoState": 0,
-      "id": 5
-    },
-    {
-      "todoName": "5",
-      "todoDescription": "6",
-      "todoState": 0,
-      "id": 6
-    },
-    {
-      "todoName": "2",
-      "todoDescription": "3",
-      "todoState": 0,
-      "id": 7
-    },
-    {
-      "todoName": "321",
-      "todoDescription": "123",
-      "todoState": 0,
-      "id": 8
-    },
-    {
-      "todoName": "4123",
-      "todoDescription": "123",
-      "todoState": 0,
-      "id": 9
-    },
-    {
-      "todoName": "123124",
-      "todoDescription": "312412",
-      "todoState": 0,
-      "id": 10
-    },
-    {
-      "todoName": "312312",
-      "todoDescription": "3123123",
-      "todoState": 0,
-      "id": 11
     }
   ]
 }
