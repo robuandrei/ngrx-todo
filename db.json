@@ -2,7 +2,7 @@
   "todos": [
     {
       "todoName": "Go to the office",
-      "todoDescription": "Go to work and to some tasks!",
+      "todoDescription": "Go to work and do some tasks!",
       "todoState": 0,
       "id": 1
     },

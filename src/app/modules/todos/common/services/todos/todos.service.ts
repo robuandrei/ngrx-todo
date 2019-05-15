@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Todo } from './../../models/todo';
@@ -13,7 +13,7 @@ export class TodosService {
   baseUrl: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://localhost:8080';
+    this.baseUrl = 'http://localhost:3000';
   }
 
   getAPITodos() {
