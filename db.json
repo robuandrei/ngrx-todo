@@ -3,14 +3,26 @@
     {
       "todoName": "Go to the office",
       "todoDescription": "Go to work and do some tasks!",
-      "todoState": 0,
+      "todoState": 1,
       "id": 1
     },
     {
       "todoName": "Eat the lunch!",
       "todoDescription": "Go with your team members to eat!",
-      "todoState": 0,
+      "todoState": 1,
       "id": 2
+    },
+    {
+      "todoName": "Finish the urgent task TSK-001",
+      "todoDescription": "This task is urgent for the current project on what I work.",
+      "todoState": 0,
+      "id": 3
+    },
+    {
+      "todoName": "Go to the shopping",
+      "todoDescription": "Buy something for the next day dinner.",
+      "todoState": 0,
+      "id": 4
     }
   ]
 }

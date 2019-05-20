@@ -10,7 +10,7 @@ import * as Todos from '../../common/store/todos/todos.actions';
 })
 export class TodoListComponent implements OnInit {
 
-  todos: Array<Todo>[];
+  todos: Array<Todo>;
   message: string;
   bgClass: string;
   p = 1;
